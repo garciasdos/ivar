@@ -1,0 +1,16 @@
+{
+    "name": "garciasdos/iban",
+    "description": "IBAN Value Object",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Garcia",
+            "email": "garciasdos@gmail.com"
+        }
+    ],
+    "require": {}
+}
