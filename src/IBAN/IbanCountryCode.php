@@ -5,6 +5,8 @@ namespace Iban;
 
 use Iban\Exception\InvalidCountryCodeException;
 
+use function in_array;
+
 class IbanCountryCode
 {
     private const ALLOWED_CODES = [
@@ -64,5 +66,10 @@ class IbanCountryCode
     public function code(): string
     {
         return $this->code;
+    }
+
+    public function equals(IbanCountryCode $ibanCountryCode): bool
+    {
+        return $this->code === $ibanCountryCode->code();
     }
 }

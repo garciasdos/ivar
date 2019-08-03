@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class IbanCountryCodeTest extends TestCase
 {
-    public function testGivenAnEuropeanCountryCodeShouldCreateWell()
+    public function testGivenAnEuropeanCountryCodeShouldCreateWell(): void
     {
         $ibanCountryCode = IbanCountryCode::fromString('ES');
 
@@ -17,7 +17,7 @@ class IbanCountryCodeTest extends TestCase
         $this->assertEquals('ES', $ibanCountryCode->code());
     }
 
-    public function testGivenAnInvalidCountryCodeShouldThrowException()
+    public function testGivenAnInvalidCountryCodeShouldThrowException(): void
     {
         $this->expectException(InvalidCountryCodeException::class);
 
