@@ -14,7 +14,7 @@ class IbanControlDigitsTest extends TestCase
         $ibanControlDigit = IbanControlDigit::fromString('15');
 
         $this->assertInstanceOf(IbanControlDigit::class, $ibanControlDigit);
-        $this->assertEquals(15, $ibanControlDigit->value());
+        $this->assertSame('15', $ibanControlDigit->value());
     }
 
     public function testGivenAnInvalidControlDigitShouldThrowException(): void
@@ -29,7 +29,7 @@ class IbanControlDigitsTest extends TestCase
         $ibanControlDigit = IbanControlDigit::fromInt(15);
 
         $this->assertInstanceOf(IbanControlDigit::class, $ibanControlDigit);
-        $this->assertEquals(15, $ibanControlDigit->value());
+        $this->assertSame('15', $ibanControlDigit->value());
     }
 
 }

@@ -11,26 +11,16 @@ class IbanControlDigit
 
     private const MAX_VALUE = 99;
 
-    /** @var int */
+    /** @var string */
     private $value;
 
-    private function __construct(int $value)
+    private function __construct(string $value)
     {
         $this->value = $value;
     }
 
     /** @throws InvalidControlDigitException */
     public static function fromString(string $value): self
-    {
-        if (ctype_digit($value) && self::isValid((int)$value)) {
-            return new self((int)$value);
-        }
-
-        throw new InvalidControlDigitException();
-    }
-
-    /** @throws InvalidControlDigitException */
-    public static function fromInt(int $value): self
     {
         if (self::isValid($value)) {
             return new self($value);
@@ -39,14 +29,23 @@ class IbanControlDigit
         throw new InvalidControlDigitException();
     }
 
-    public function value(): int
+    /** @throws InvalidControlDigitException */
+    public static function fromInt(int $value): self
+    {
+        if (self::isValid((string)$value)) {
+            return new self((string)$value);
+        }
+
+        throw new InvalidControlDigitException();
+    }
+
+    public function value(): string
     {
         return $this->value;
     }
 
-    private static function isValid(int $value): bool
+    private static function isValid(string $value): bool
     {
-        return  (self::MIN_VALUE <= $value) && ($value <= self::MAX_VALUE);
-
+        return  (ctype_digit($value) && self::MIN_VALUE <= $value) && ($value <= self::MAX_VALUE);
     }
 }
