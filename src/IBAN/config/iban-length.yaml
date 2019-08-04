@@ -1,0 +1,163 @@
+iban:
+  code_length:
+    AT:
+      swift_code: 0
+      bank_code: 5
+      account_number: 11
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    BE:
+      swift_code: 0
+      bank_code: 3
+      account_number: 7
+      control_key: 2
+      office_code: 0
+      account_type_number: 0
+    BG:
+      swift_code: 4
+      bank_code: 0
+      account_number: 8
+      control_key: 2
+      office_code: 4
+      account_type_number: 0
+    CY:
+      swift_code: 0
+      bank_code: 3
+      account_number: 16
+      control_key: 0
+      office_code: 0
+      account_type_number: 5
+    CZ:
+      swift_code: 0
+      bank_code: 4
+      account_number: 10
+      control_key: 0
+      office_code: 0
+      account_type_number: 6
+    DE:
+      swift_code: 0
+      bank_code: 8
+      account_number: 10
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    DK:
+      swift_code: 0
+      bank_code: 4
+      account_number: 10
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    EE:
+      swift_code: 0
+      bank_code: 4
+      account_number: 11
+      control_key: 1
+      office_code: 0
+      account_type_number: 0
+    ES:
+      swift_code: 0
+      bank_code: 4
+      account_number: 10
+      control_key: 2
+      office_code: 4
+      account_type_number: 0
+    FI:
+      swift_code: 0
+      bank_code: 6
+      account_number: 7
+      control_key: 1
+      office_code: 0
+      account_type_number: 0
+    FR:
+      swift_code: 0
+      bank_code: 5
+      account_number: 11
+      control_key: 2
+      office_code: 4
+      account_type_number: 0
+    GB:
+      swift_code: 0
+      bank_code: 4
+      account_number: 8
+      control_key: 2
+      office_code: 4
+      account_type_number: 6
+    GR:
+      swift_code: 0
+      bank_code: 7
+      account_number: 16
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    HR:
+      swift_code: 0
+      bank_code: 7
+      account_number: 9
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    HU:
+      swift_code: 0
+      bank_code: 3
+      account_number: 15
+      control_key: 1
+      office_code: 5
+      account_type_number: 0
+    IE:
+      swift_code: 4
+      bank_code: 6
+      account_number: 8
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    IT:
+      swift_code: 4
+      bank_code: 5
+      account_number: 12
+      control_key: 1
+      office_code: 5
+      account_type_number: 0
+    LT:
+      swift_code: 0
+      bank_code: 5
+      account_number: 12
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    LU:
+      swift_code: 0
+      bank_code: 3
+      account_number: 13
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    LV:
+      swift_code: 0
+      bank_code: 4
+      account_number: 13
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    MT:
+      swift_code: 0
+      bank_code: 4
+      account_number: 16
+      control_key: 0
+      office_code: 0
+      account_type_number: 5
+    NL:
+      swift_code: 0
+      bank_code: 4
+      account_number: 10
+      control_key: 0
+      office_code: 0
+      account_type_number: 0
+    PL:
+      swift_code: 0
+      bank_code: 7
+      account_number: 16
+      control_key: 0
+      office_code: 1
+      account_type_number: 0

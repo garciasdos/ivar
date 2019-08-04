@@ -3,19 +3,15 @@ declare(strict_types=1);
 
 namespace Iban;
 
-use Iban\Exception\InvalidCountryCodeException;
-
-use function in_array;
-
-class IbanCountryCode
+class IbanCodeLengths
 {
-    private const ALLOWED_CODES = [
+    private const LENGTHS_BY_COUNTRY = [
         'DE' => [
-            'bankCode',
-            'accountNumber',
-            'officeCode',
-            'accountTypeCode',
-            'swiftCodeInitials'
+            'bankCode' => 8,
+            'accountNumber' => 10,
+            'officeCode' => 0,
+            'accountTypeCode' => 0,
+            'swiftCodeInitials' => 0,
         ],
         'AT' => [
             'bankCode',
@@ -208,36 +204,8 @@ class IbanCountryCode
         ],
     ];
 
-    /** @var string */
-    private $code;
-
-    private function __construct(string $code)
+    public static function fromCountryCode(IbanCountryCode $countryCode): array
     {
-        $this->code = $code;
-    }
-
-    /** @throws InvalidCountryCodeException */
-    public static function fromString(string $code): self
-    {
-        if (!self::isValid($code)) {
-            throw new InvalidCountryCodeException();
-        }
-
-        return new self($code);
-    }
-
-    private static function isValid(string $code): bool
-    {
-        return in_array($code, self::ALLOWED_CODES, true);
-    }
-
-    public function code(): string
-    {
-        return $this->code;
-    }
-
-    public function equals(IbanCountryCode $ibanCountryCode): bool
-    {
-        return $this->code === $ibanCountryCode->code();
+        return self::LENGTHS_BY_COUNTRY[$countryCode->code()];
     }
 }
